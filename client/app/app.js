@@ -29,8 +29,11 @@ import socket from '../components/socket/socket.service';
 
 import './app.scss';
 
+import MapModule from './map/map.component';
+
+
 angular.module('tableApp', [ngCookies, ngResource, ngSanitize, 'btford.socket-io', uiRouter,
-  uiBootstrap, _Auth, account, admin, navbar, footer, main, constants, socket, util
+  uiBootstrap, _Auth, account, admin, navbar, footer, main, constants, socket, util, MapModule
 ])
   .config(routeConfig)
   .run(function($rootScope, $location, Auth) {
