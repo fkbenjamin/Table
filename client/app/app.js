@@ -26,14 +26,16 @@ import main from './main/main.component';
 import constants from './app.constants';
 import util from '../components/util/util.module';
 import socket from '../components/socket/socket.service';
+import map from './map/map.component';
+
+
 
 import './app.scss';
 
-import MapModule from './map/map.component';
 
 
 angular.module('tableApp', [ngCookies, ngResource, ngSanitize, 'btford.socket-io', uiRouter,
-  uiBootstrap, _Auth, account, admin, navbar, footer, main, constants, socket, util, MapModule
+  uiBootstrap, _Auth, account, admin, navbar, footer, main, constants, socket, util, map
 ])
   .config(routeConfig)
   .run(function($rootScope, $location, Auth) {
@@ -52,6 +54,6 @@ angular.module('tableApp', [ngCookies, ngResource, ngSanitize, 'btford.socket-io
 angular.element(document)
   .ready(() => {
     angular.bootstrap(document, ['tableApp'], {
-      strictDi: true
+      strictDi: false
     });
   });
