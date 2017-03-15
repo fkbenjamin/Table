@@ -10,6 +10,7 @@ var fs = require('fs');
 var path = require('path');
 var ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
 
+
 module.exports = function makeWebpackConfig(options) {
     /**
      * Environment type
@@ -51,7 +52,8 @@ module.exports = function makeWebpackConfig(options) {
                 'angular-socket-io',
                 'angular-ui-bootstrap',
                 'angular-ui-router',
-                'lodash'
+                'lodash',
+                'snapsvg'
             ]
         };
     }
@@ -364,6 +366,7 @@ module.exports = function makeWebpackConfig(options) {
         clearImmediate: false,
         setImmediate: false
     };
+
 
     return config;
 };

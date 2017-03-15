@@ -12,7 +12,6 @@ import uiBootstrap from 'angular-ui-bootstrap';
 // import ngMessages from 'angular-messages';
 // import ngValidationMatch from 'angular-validation-match';
 
-
 import {
   routeConfig
 } from './app.config';
@@ -27,6 +26,9 @@ import constants from './app.constants';
 import util from '../components/util/util.module';
 import socket from '../components/socket/socket.service';
 import map from './map/map.component';
+import snap from '../assets/js/snap.svg-min.js';
+
+
 
 
 
